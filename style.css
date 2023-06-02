@@ -1,0 +1,23 @@
+/*
+ Theme Name:   DiviChild
+ Theme URI:    http://www.elegantthemes.com/gallery/divi/
+ Description:  Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+ Author:       Krzysztof Głaz
+ Author URI:   https://judoinfo.pl
+ Template:     Divi
+ Version:      2.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  DiviChild
+*/
+
+/* Breadcrumbs for Yoast */
+#section-breadcrumbs {
+        padding: 20px 0 !important;
+	}
+#section-breadcrumbs .et_pb_row {
+        padding: 0 !important;
+	}
+/* END Breadcrumbs for Yoast */
+
