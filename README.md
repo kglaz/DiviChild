@@ -1,13 +1,17 @@
 # DiviChild
-DiviChild for Divi (Elegant Themes) - wordpress theme
+
+Child theme for Divi [Elegant Themes](https://www.elegantthemes.com/) - wordpress theme
 
 
-# SECURITY
+## SECURITY
 
-Add to .htaccess
+For security purposes, you can add code to the .httacess and wp-config-sample.php files.
 
-Deny access to wp-config.php, readme.html, license.txt
+### .httacess
 
+Forbidden access to files from the browser: wp-config-sample.php, readme.html, license.txt
+
+```
 <files readme.html>
 order allow,deny
 deny from all
@@ -28,20 +32,16 @@ Order Deny,Allow
 Deny from all
 Allow from 127.0.0.1
 </files>
+```
 
-Allow only Selected IP Addresses to Access wp-admin
-(change IP Address)
+### wp-config.php
 
-<Limit GET POST PUT>
-order deny,allow
-deny from all
-allow from 192.168.0.0
-allow from IP_ADDRESS_2
-</Limit>	
+Dissallow File Editing setting within the WordPress admin dashboard
 
-
-Add to wp-config.php
-
-/** Wylaczenie edycji wtyczek przez panel */
+```
 define( 'DISALLOW_FILE_EDIT', true );
+```
+
+
+
 
