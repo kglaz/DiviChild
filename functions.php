@@ -23,7 +23,6 @@ function remove_wp_version_rss() {
 
 add_filter('the_generator', 'remove_wp_version_rss');
 
-
 # Remove version from css and js
 function vc_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
@@ -33,7 +32,6 @@ function vc_remove_wp_ver_css_js( $src ) {
  
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
-
 
 # Enumeration of users
 function author_page_redirect() {
@@ -47,46 +45,3 @@ add_action( 'template_redirect', 'author_page_redirect' );
 #
 # END scurity
 #
-
-
-// Dostosowanie do ustawy z wrzesnia 2020
-
-/*
-// Disable REST API link tag
-remove_action('wp_head', 'rest_output_link_wp_head', 10);
-
-// Disable oEmbed Discovery Links
-remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
-
-// Disable REST API link in HTTP headers
-remove_action('template_redirect', 'rest_output_link_header', 11, 0);
-
-add_filter("style_loader_tag", function($tag){
-    return str_replace("id='mediaelement-css' " ,"id='medialement-css' property='stylesheet'",  $tag);
-});
-
-add_filter("style_loader_tag", function($tag){
-    return str_replace("id='wp-mediaelement-css' " ,"id='wp-medialement-css' property='stylesheet'",  $tag);
-});
- */
-// END Dostosowanie do ustawy z wrzesnia 2020
-
-// Poprawia wyświtlanie obrazów w BLOGu, domyślnie skalowane są na 400x250
-// co powoduje, że gdy wymuszamy wyświetlanie obrazu jako kwadrat jest on 
-// z tej wartości niepoprawnie powiększany i pojawia się pikselizacja.
-// źródło: https://www.eleganttweaks.com/divi/changing-portfolio-blog-module-thumbnail-sizes/
-
-// Begin custom image size for Blog Module
-add_filter( 'et_pb_blog_image_height', 'blog_size_h' );
-add_filter( 'et_pb_blog_image_width', 'blog_size_w' );
-
-function blog_size_h($height) {
-	return '600';
-}
-
-function blog_size_w($width) {
-	return '600';
-}
-
-add_image_size( 'custom-blog-size', 600, 600 );
-// End custom image size for Blog Module
