@@ -24,6 +24,7 @@ function remove_wp_version_rss() {
 add_filter('the_generator', 'remove_wp_version_rss');
 
 # Remove version from css and js
+/* # Removed because after updating Wordpress, a white screen is displayed when adding an entry.
 function vc_remove_wp_ver_css_js( $src ) {
 	if ( strpos( $src, 'ver=' ) )
 		$src = remove_query_arg( 'ver', $src );
@@ -32,7 +33,7 @@ function vc_remove_wp_ver_css_js( $src ) {
  
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
-
+*/
 # Enumeration of users
 function author_page_redirect() {
     if ( is_author() ) {
