@@ -1,3 +1,4 @@
+<?php
 // Poprawia wyświtlanie obrazów w BLOGu, domyślnie skalowane są na 400x250
 // co powoduje, że gdy wymuszamy wyświetlanie obrazu jako kwadrat jest on 
 // z tej wartości niepoprawnie powiększany i pojawia się pikselizacja.
