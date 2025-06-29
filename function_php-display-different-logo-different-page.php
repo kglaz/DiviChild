@@ -1,3 +1,4 @@
+<?php
 /* Display different logo if custom field is custom-page-one = 1 */ 
  
 function my_conditional_logo( $logo_container ) { 
