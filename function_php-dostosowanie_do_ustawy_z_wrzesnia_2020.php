@@ -1,3 +1,4 @@
+<?php
 // Dostosowanie do ustawy z wrzesnia 2020
 
 /*
