@@ -34,6 +34,7 @@ function vc_remove_wp_ver_css_js( $src ) {
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 */
+
 # Enumeration of users
 function author_page_redirect() {
     if ( is_author() ) {
@@ -43,6 +44,6 @@ function author_page_redirect() {
 
 add_action( 'template_redirect', 'author_page_redirect' );
 
-#
+# ####################################################################
 # END scurity
-#
+# ####################################################################
